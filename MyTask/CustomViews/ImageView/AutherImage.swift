@@ -19,9 +19,15 @@ class AutherImage: UIImageView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    init(cornerReduis:CGFloat) {
+        super.init(frame: .zero)
+        configure()
+        layer.cornerRadius  = cornerReduis
+    }
 
+    
     private func configure(){
-        layer.cornerRadius  = 30
         clipsToBounds       = true
         translatesAutoresizingMaskIntoConstraints = false
         self.image = UIImage(named: palceHolder)

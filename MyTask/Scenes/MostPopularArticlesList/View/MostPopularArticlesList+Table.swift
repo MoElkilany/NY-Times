@@ -24,7 +24,7 @@ extension MostPopularArticlesList :UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.didSelectCell(index: indexPath.row)
     }
     
     

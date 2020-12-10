@@ -66,6 +66,7 @@ class MostPopularArticlesList: DataLoadingVC {
 
 extension MostPopularArticlesList  : MostPopularArticlesProtocol{
     
+    
     func gerError(error: String) {
         self.presentAlertOnMainThread(title: .ServerError, message: error, buttonTitle: .ok)
     }
@@ -81,7 +82,19 @@ extension MostPopularArticlesList  : MostPopularArticlesProtocol{
         mostPopularArticlesTable.reloadData()
     }
     
-   
+    func didselect(result: ResultResponse) {
+        let detailsPresenter = MostPopularDetailsPresenter(with: result, with: nil)
+        
+        let detailsController = MostPopularArticlesDetailsVC()
+        detailsController.presenter = detailsPresenter
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = .white
+
+        self.navigationController?.pushViewController(detailsController, animated: true)
+        
+    }
+    
     
     
 }

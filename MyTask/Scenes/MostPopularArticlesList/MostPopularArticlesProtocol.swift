@@ -12,7 +12,10 @@ protocol MostPopularArticlesProtocol {
     func dismissLoading()
     func getDataSuccesfully()
     func gerError(error:String)
+    func didselect(result:ResultResponse)
 }
+
+
 
 protocol CellDataProtocol{
     func setUpCellTitle(title:String)

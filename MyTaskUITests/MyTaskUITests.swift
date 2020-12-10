@@ -16,7 +16,6 @@ class MyTaskUITests: XCTestCase {
 
       app = XCUIApplication()
       app.launch()
-        
     }
     
    

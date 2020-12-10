@@ -35,6 +35,9 @@
 		DBC04142258198AD00D5673B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC04141258198AD00D5673B /* UIViewController+Ext.swift */; };
 		DBC0414B25819CAF00D5673B /* MyTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0414A25819CAF00D5673B /* MyTaskTests.swift */; };
 		DBC0415F25819FDF00D5673B /* MyTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0415E25819FDF00D5673B /* MyTaskUITests.swift */; };
+		DBEB370C2582153A00D0140F /* MostPopularArticlesDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB370B2582153A00D0140F /* MostPopularArticlesDetailsVC.swift */; };
+		DBEB371125822DCF00D0140F /* MostPopularDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB371025822DCF00D0140F /* MostPopularDetailsPresenter.swift */; };
+		DBEB371625822DEA00D0140F /* MostPopularDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB371525822DEA00D0140F /* MostPopularDetailsProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		DBC0415C25819FDF00D5673B /* MyTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC0415E25819FDF00D5673B /* MyTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskUITests.swift; sourceTree = "<group>"; };
 		DBC0416025819FDF00D5673B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBEB370B2582153A00D0140F /* MostPopularArticlesDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesDetailsVC.swift; sourceTree = "<group>"; };
+		DBEB371025822DCF00D0140F /* MostPopularDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDetailsPresenter.swift; sourceTree = "<group>"; };
+		DBEB371525822DEA00D0140F /* MostPopularDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDetailsProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,9 @@
 		DBC040DB25811F9900D5673B /* MostPopularArticlesDetails */ = {
 			isa = PBXGroup;
 			children = (
+				DBEB36FF258214C600D0140F /* View */,
+				DBEB371025822DCF00D0140F /* MostPopularDetailsPresenter.swift */,
+				DBEB371525822DEA00D0140F /* MostPopularDetailsProtocol.swift */,
 			);
 			path = MostPopularArticlesDetails;
 			sourceTree = "<group>";
@@ -322,6 +331,14 @@
 				DBC0416025819FDF00D5673B /* Info.plist */,
 			);
 			path = MyTaskUITests;
+			sourceTree = "<group>";
+		};
+		DBEB36FF258214C600D0140F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBEB370B2582153A00D0140F /* MostPopularArticlesDetailsVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,11 +483,14 @@
 				DBC0412525816F5400D5673B /* String+Ext.swift in Sources */,
 				DBC0411A258146C800D5673B /* ContainerCellView.swift in Sources */,
 				DBC040C32581199300D5673B /* MostPopularArticlesList.swift in Sources */,
+				DBEB371625822DEA00D0140F /* MostPopularDetailsProtocol.swift in Sources */,
 				DBC041062581393C00D5673B /* MostPopularArticlesProtocol.swift in Sources */,
 				DBC04103258138E300D5673B /* MostPopularArticlesPresenter.swift in Sources */,
 				DBC040E525812B7900D5673B /* ErrorMessage.swift in Sources */,
+				DBEB371125822DCF00D0140F /* MostPopularDetailsPresenter.swift in Sources */,
 				DBC041202581609B00D5673B /* AutherImage.swift in Sources */,
 				DBC040F3258132D100D5673B /* UIFont+Ext.swift in Sources */,
+				DBEB370C2582153A00D0140F /* MostPopularArticlesDetailsVC.swift in Sources */,
 				DBC040BF2581199300D5673B /* AppDelegate.swift in Sources */,
 				DBC0410E25813C4500D5673B /* MostPopularArticlesCell.swift in Sources */,
 				DBC040C12581199300D5673B /* SceneDelegate.swift in Sources */,

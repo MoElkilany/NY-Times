@@ -70,4 +70,10 @@ class MostPopularArticlesPresenter {
         }
         return imagaUrl
     }
+    
+    func didSelectCell(index:Int){
+        self.view.didselect(result: articlesList[index])
+    }
+    
+    
 }

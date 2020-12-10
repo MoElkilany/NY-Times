@@ -10,13 +10,14 @@ import UIKit
 class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
     
     static let reuseID = "MostPopularArticlesCell"
-     let titleLable = UILabel()
-    //GeneralLable(colorText: .black, ChoosedFont: .OpenSansSimeBold(size: 20))
-    private  let descriptionLable = UILabel()
-    //        GeneralLable(colorText: .lightGray, ChoosedFont: .OpenSansRegular(size: 15))
-    private  let dateLable = UILabel()
-    //GeneralLable(colorText: .black, ChoosedFont: .OpenSansRegular(size: 15))
-    private  let autherImage = AutherImage(frame: .zero)
+    let titleLable = GeneralLable(colorText: .black, ChoosedFont: .OpenSansBold(size: 18), alignment: .center)
+    
+    private  let descriptionLable = GeneralLable(colorText: .black, ChoosedFont:.OpenSansLight(size: 15), alignment: .left)
+    
+    private  let dateLable = GeneralLable(colorText: .lightGray, ChoosedFont: .OpenSansBold(size: 20), alignment: .center)
+    
+    
+    private  let autherImage = AutherImage(cornerReduis: 30)
     private  let containerView = ContainerCellView()
     private let padding : CGFloat = 8
     
@@ -56,7 +57,6 @@ class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
         NSLayoutConstraint.activate(containerViewConstraints)
     }
     
-    
     private func configurerImageView(){
         addSubview(autherImage)
         
@@ -72,12 +72,6 @@ class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
     
     private func configurerTitleLable(){
         addSubview(titleLable)
-        titleLable.translatesAutoresizingMaskIntoConstraints = false
-        titleLable.textColor = .black
-        titleLable.backgroundColor = .clear
-        titleLable.numberOfLines  = 0
-        titleLable.textAlignment = .left
-        titleLable.font = UIFont.OpenSansBold(size: 15)
         
         let titleLableConstraints = [
             titleLable.topAnchor.constraint(equalTo:containerView.topAnchor, constant: padding),
@@ -90,29 +84,20 @@ class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
     
     private func configurerDescrptionLable(){
         addSubview(descriptionLable)
-        descriptionLable.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLable.textColor = .black
-        descriptionLable.backgroundColor = .clear
-        descriptionLable.numberOfLines  = 0
-        descriptionLable.textAlignment = .center
-        descriptionLable.font = UIFont.OpenSansLight(size: 15)
+
         
         let descriptionLableConstraints = [
             descriptionLable.topAnchor.constraint(equalTo:titleLable.bottomAnchor, constant: 4),
             descriptionLable.trailingAnchor.constraint(equalTo:containerView.trailingAnchor, constant: -padding),
             descriptionLable.leadingAnchor.constraint(equalTo:containerView.leadingAnchor, constant: padding),
             descriptionLable.heightAnchor.constraint(lessThanOrEqualToConstant:400)
-            
         ]
         NSLayoutConstraint.activate(descriptionLableConstraints)
     }
     
     private func configurerDateLable(){
         addSubview(dateLable)
-        dateLable.translatesAutoresizingMaskIntoConstraints = false
-        dateLable.textColor = .lightGray
-        dateLable.textAlignment = .left
-        dateLable.font = UIFont.OpenSansBold(size: 15)
+
         let dateLableConstraints = [
             dateLable.topAnchor.constraint(equalTo:descriptionLable.bottomAnchor, constant: 2),
             dateLable.trailingAnchor.constraint(equalTo:containerView.trailingAnchor, constant: -padding * 2),
