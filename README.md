@@ -1,7 +1,7 @@
 # MyTask
 # Simple NY Times App
 
-##Simple Consist of two main Screens
+## Simple Consist of two main Screens
 * Most popular articles List -> that Show the list of Last 30 days articles.
 * Most popular articles Details VC -> that Show the More Details of article.
 
