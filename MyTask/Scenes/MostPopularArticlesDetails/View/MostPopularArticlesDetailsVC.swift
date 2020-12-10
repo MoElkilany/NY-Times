@@ -10,7 +10,6 @@ import UIKit
 class MostPopularArticlesDetailsVC: UIViewController {
     
     var presenter: MostPopularDetailsPresenter?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +21,9 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        title = presenter?.navigationTitle()
         configureViewItems()
     }
-    
-    
     
     let padding:CGFloat = 8
     
@@ -33,22 +31,20 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     let containerView = UIView()
 
-    let typeLable = GeneralLable(colorText: .blue, ChoosedFont: .OpenSansBold(size: 15), alignment: .center)
+    let typeLable = GeneralLable(colorText: .magenta, ChoosedFont: .OpenSansBold(size: 15), alignment: .center)
 
     let descriptionLable = GeneralLable(colorText: .black, ChoosedFont: .OpenSansLight(size: 20), alignment: .center)
     
     let titleLable = GeneralLable(colorText: .black, ChoosedFont: .OpenSansBold(size: 25), alignment: .center)
 
 
-    let autherNameLable = GeneralLable(colorText: .lightGray, ChoosedFont: .OpenSansBold(size: 20), alignment: .center) // byLine
+    let autherNameLable = GeneralLable(colorText: .lightGray, ChoosedFont: .OpenSansBold(size: 20), alignment: .center)
     
     let autherImage = AutherImage(cornerReduis: 12)
     
     let sourceLable = GeneralLable(colorText: .brown, ChoosedFont: .OpenSansBold(size: 12), alignment: .center)
     
     let dateLable = GeneralLable(colorText: .gray, ChoosedFont: .OpenSansBold(size: 12), alignment: .center)
-    
-    
     
     
     func configureViewItems(){
@@ -97,7 +93,6 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     func configureTypeLable(){
         containerView.addSubview(typeLable)
-//        typeLable.text = "Type Article"
         let typeLableConstraints = [
             typeLable.topAnchor.constraint(equalTo: containerView.topAnchor),
             typeLable.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -109,7 +104,6 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     func configureTitleLable(){
         containerView.addSubview(titleLable)
-//        titleLable.text = "titleLable titleLable titleLable"
         let titleLableLableConstraints = [
             titleLable.topAnchor.constraint(equalTo: typeLable.bottomAnchor, constant: -padding   ),
             titleLable.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -121,7 +115,6 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
      func configureUpdatedDateLable(){
          containerView.addSubview(dateLable)
-//        dateLable.text = "2020 - 12 - 21"
          let dateLableConstraints = [
             dateLable.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: padding - 4 ),
             dateLable.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -132,7 +125,6 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     func configureAutherNameLable(){
         containerView.addSubview(autherNameLable)
-//        autherNameLable.text = "Doctor sam"
         let autherNameLableConstraints = [
             autherNameLable.topAnchor.constraint(equalTo: dateLable.bottomAnchor, constant: padding  ),
             autherNameLable.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
@@ -145,7 +137,6 @@ class MostPopularArticlesDetailsVC: UIViewController {
     
     func configureAutherImage(){
         containerView.addSubview(autherImage)
-//        autherImage.image = UIImage(named: "test")
         let autherNameLableConstraints = [
             autherImage.topAnchor.constraint(equalTo: autherNameLable.bottomAnchor, constant: padding ),
             autherImage.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),

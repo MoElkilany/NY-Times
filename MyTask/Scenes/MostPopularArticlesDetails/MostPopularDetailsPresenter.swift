@@ -17,17 +17,18 @@ class MostPopularDetailsPresenter {
         self.view = view
     }
     
+    func navigationTitle()->String{
+        return "Article Details"
+    }
+    
     func viewDidLoad(){
-        
         view?.setAutherName(byline: articlesListDetails?.byline ?? "")
         view?.setType(type:articlesListDetails?.source ?? "")
         view?.setTitle(title:articlesListDetails?.title ?? "")
         view?.date(date: articlesListDetails?.updated?.convertToDisplayFormat() ?? "")
         view?.description(abstract: articlesListDetails?.abstract ?? "")
         view?.image(imageUrl: getImageUrl())
-
     }
-    
     
     private func getImageUrl()->String{
         var imagaUrl = ""

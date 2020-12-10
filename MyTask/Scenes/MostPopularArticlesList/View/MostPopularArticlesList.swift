@@ -89,7 +89,7 @@ extension MostPopularArticlesList  : MostPopularArticlesProtocol{
         detailsController.presenter = detailsPresenter
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem?.tintColor = .white
+        navigationItem.backBarButtonItem?.tintColor = .black
 
         self.navigationController?.pushViewController(detailsController, animated: true)
         
