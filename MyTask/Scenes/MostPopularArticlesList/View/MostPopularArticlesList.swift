@@ -10,7 +10,6 @@ import UIKit
 class MostPopularArticlesList: DataLoadingVC {
 
     let mostPopularArticlesTable = UITableView()
-    
     var presenter :MostPopularArticlesPresenter!
 
     

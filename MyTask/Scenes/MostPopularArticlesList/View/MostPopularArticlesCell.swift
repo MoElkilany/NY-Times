@@ -38,10 +38,10 @@ class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
     
     private func configrationCellItems(){
         configurerContainerView()
+        configurerImageView()
         configurerTitleLable()
         configurerDescrptionLable()
         configurerDateLable()
-        configurerImageView()
     }
     
     
@@ -76,7 +76,7 @@ class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
         let titleLableConstraints = [
             titleLable.topAnchor.constraint(equalTo:containerView.topAnchor, constant: padding),
             titleLable.trailingAnchor.constraint(equalTo:containerView.trailingAnchor, constant: -padding),
-            titleLable.leadingAnchor.constraint(equalTo:containerView.leadingAnchor, constant: 80),
+            titleLable.leadingAnchor.constraint(equalTo:autherImage.trailingAnchor, constant: -4),
             titleLable.heightAnchor.constraint(equalToConstant: 50)
         ]
         NSLayoutConstraint.activate(titleLableConstraints)
