@@ -9,13 +9,8 @@ import UIKit
 
 class MostPopularArticlesCell: UITableViewCell , CellDataProtocol{
     
-    
-    
-    
-    
-    
     static let reuseID = "MostPopularArticlesCell"
-    private let titleLable = UILabel()
+     let titleLable = UILabel()
     //GeneralLable(colorText: .black, ChoosedFont: .OpenSansSimeBold(size: 20))
     private  let descriptionLable = UILabel()
     //        GeneralLable(colorText: .lightGray, ChoosedFont: .OpenSansRegular(size: 15))

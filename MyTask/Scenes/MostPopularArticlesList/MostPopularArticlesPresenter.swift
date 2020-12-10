@@ -60,7 +60,9 @@ class MostPopularArticlesPresenter {
     
     private func getImageUrl(index:Int)->String{
         var imagaUrl = ""
-        for media in articlesList[index].media!{
+        guard let newMedia = articlesList[index].media else {return "test"}
+        
+        for media in newMedia {
             guard let meta = media.mediaMetadata else {return "" }
             for url in  meta {
                 imagaUrl = url.url ?? ""

@@ -14,7 +14,6 @@ protocol MostPopularArticlesProtocol {
     func gerError(error:String)
 }
 
-
 protocol CellDataProtocol{
     func setUpCellTitle(title:String)
     func setUpCellDescription(description:String)
